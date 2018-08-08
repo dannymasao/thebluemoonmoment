@@ -1,0 +1,18 @@
+
+                <aside class="album-card">
+                    <p class="font-special mb-3">LISTEN</p>
+                    <div class="album-card-inner"> 
+                        <figure>
+                            <img src="{{ .Get "src" }}">
+                        </figure>
+                        <div class="album-card-text">
+                            <h2>{{ .Get "name" }}</h2>
+                            <h3>『{{ .Get "title" }}』</h3>
+                            <p>{{ .Get "year" }}年</p>
+                            <ul class="album-card-links">
+                                <li><a href="{{ .Get "applelink" }}" class="link-color">Apple Musicで聴く</a></li>
+                                <li><a href="{{ .Get "spotifylink" }}" class="link-color">Spotifyで聴く</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>

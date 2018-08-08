@@ -1,0 +1,16 @@
+{{ define "main" }}
+        <main class="bg-white"> <!-- flex-grow1 -->
+            <section class="container container-center container-padding section">
+
+                {{ .Content }}
+                
+                <div class="article-info">
+                    {{ partial "breadcrumb.html" . }}
+                </div>
+            </section>
+        </main>
+{{ end }}
+{{ define "footer" }}
+        <li><a href="#">{{ partial "icon/icon-up.html" . }}上に戻る</a></li>
+        <li><a href="/articles/">{{ partial "icon/icon-document.html" . }}<span>記事一覧を見る</span></a></li> 
+{{ end }}

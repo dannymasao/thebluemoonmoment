@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <main> <!-- class="flex-grow1" -->
+        <section class="container container-center container-padding section">
+            <h2 class="page-title font-special">ARTICLES</h2>
+            <ul class="article-list">
+                {{ range where .Pages "Section" "articles" }}
+			        {{ .Render "li" }}
+			    {{ end }}
+            </ul>
+            {{/*
+            <a class="fs-xs link-leftline-wrapper">
+                <span class="link-leftline" href="/">MUSICの記事をもっと見る</span>
+            </a>
+            */}}
+        </section>
+    </main>
+{{ end }}
+{{ define "footer" }}
+		<li><a href="#">{{ partial "icon/icon-up.html" . }}上に戻る</a></li>
+        {{/*<li><button type="butyon" id="copyUrl" data-title="{{ .Title }}"><span>{{ partial "icon/icon-link.html" . }}このサイトのタイトルとURLをコピーする</span></button></li>*/}}
+		<li><a href="/about/">{{ partial "icon/icon-about.html" . }}<span>当サイト・著者について</span></a></li>
+{{ end }}

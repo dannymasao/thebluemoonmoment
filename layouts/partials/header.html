@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ .Site.Title }}</title>
+        <meta name="author" content="{{ $.Site.Params.author }}">
+        <meta name="description" content="
+        {{- if .IsHome -}}
+            {{ $.Site.Params.description }}
+        {{- else -}}
+            {{.Description}}
+        {{- end -}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> <!-- &text=INABLUEMOONMUSIC0123456789/ -->
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.min.css">
+    </head>
+    <body>
+        {{`<!--[if lte IE 9]>
+            <p class="browserupgrade">ご使用のブラウザーはバージョンが古く、当サイトが正しく表示されない可能性があります。また、セキュリティーの観点からも危険です。最新のブラウザーに<a href="https://browsehappy.com/">アップデート</a>することを推奨いたします。</p>
+        <![endif]-->` | safeHTML }}
+        {{ if .IsHome }}
+            <header class="hero fixed-bg">
+                <div class="hero-inner">
+                    <div class="full-moon-wrapper">
+                        <svg class="full-moon">
+                            <circle cx="50" cy="50" r="30" stroke-width="4" />
+                        </svg>
+                    </div>
+                    <h1 class="site-title font-special"><span>IN</span><span>A</span><span>BLUE</span><span>MOON</span></h1>
+                    <h2 class="site-subtitle">A Blog by Danny Masao Winston</h2>
+                </div>
+            </header>
+            <div class="overlay-body">
+        {{ else }}
+            {{ partial "nav.html" . }}
+        {{ end }}
+        

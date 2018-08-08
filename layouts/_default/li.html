@@ -1,0 +1,17 @@
+    <li class="article-list-item">
+        <a class="article-list-link" href="{{ .Permalink }}">
+            <article>
+                <time class="article-list-date font-special">{{ .Date.Format "Jan 02, 2006" }}</time>
+                <header>
+                    <h3 class="article-list-title">{{ .Title }}</h3>
+                    <h4 class="article-list-subtitle">{{ .Params.subtitle }}</h4>    
+                </header>
+                <ul>
+                {{ range .Params.tags }}
+                    <li class="article-list-tag">{{ . }}</li>
+                {{ end }}
+                </ul>
+            </article>
+            <span class="screenreader">記事を読む</span>
+        </a>
+    </li>

@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <main class="flex-grow1">
+        <section class="container container-center container-padding section">
+            <h2 class="page-title font-special">{{ .Title }}</h2>
+            <ul class="article-list">
+                {{ range .Pages }}
+                    {{ .Render "li" }}
+                {{ end }}
+            </ul>
+        </section>
+    </main>
+{{ end }}
+{{ define "footer" }}
+        <li><a href="#">{{ partial "icon/icon-up.html" . }}上に戻る</a></li>
+        <li><a href="/about/">{{ partial "icon/icon-about.html" . }}<span>当サイト・著者について</span></a></li>
+{{ end }}

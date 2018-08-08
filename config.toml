@@ -1,0 +1,11 @@
+baseURL = "https://inabluemoon.com/"
+languageCode = "ja"
+title = "A Blue Moon Moment"
+preserveTaxonomyNames = true
+
+[Params]
+author = "Danny Masao Winston"
+description = "A Blog by Danny Masao Winston"
+twitter_account = "@DannyMasao1024"
+github_account = "xxxxxx"
+analytics = "xxxxxxx"

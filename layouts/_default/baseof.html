@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="author" content="{{ $.Site.Params.author }}">
+    <title>
+    {{- if .IsHome -}}
+        {{ .Site.Title }}
+    {{- else -}}
+        {{ .Title }} | {{ .Site.Title }}
+    {{- end -}}
+    </title>
+    <meta name="description" content="
+    {{- if .IsHome -}}
+        {{ $.Site.Params.description }}
+    {{- else -}}
+        {{.Description}}
+    {{- end -}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Start of Open Graph -->
+    <meta property="og:title" content="{{ .Title }}">
+    {{ if .IsPage -}}
+    <meta property="og:type" content="article">
+        {{ if .Params.date -}}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+        {{- end }}
+    {{ else -}}
+    <meta property="og:type" content="website">
+    {{- end }}
+    <meta property="og:description" content="
+    {{- if .IsHome -}}
+        {{ $.Site.Params.description }}
+    {{- else -}}
+        {{.Description}}
+    {{- end -}}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    {{ if .Params.thumbnail -}}
+    <meta property="og:image" content="{{ .Params.thumbnail }}">
+    {{ else -}}
+    <meta property="og:image" content="https://res.cloudinary.com/dkvp7bl7j/image/upload/v1533481741/thebluemoonmoment.jpg">
+    {{- end }}
+    {{ range .Params.tags -}}
+    <meta property="og:tags" content="{{ . }}">
+    {{- end }}
+    <!-- End of Open Graph -->
+    <!-- Start of Twitter -->
+    <meta name="twitter:site" content="{{ $.Site.Params.twitter_account }}">
+    {{ if .Params.twitter_summary -}}
+    <meta name="twitter:card" content="{{ .Params.twitter_summary }}">
+    {{ else -}}
+    <meta name="twitter:card" content="summary">
+    {{- end }}
+    <meta property="twitter:description" content="
+    {{- if .IsHome -}}
+        {{ $.Site.Params.description }}
+    {{- else -}}
+        {{.Description}}
+    {{- end -}}">
+    <meta property="twitter:title" content="{{ .Title }}">
+    {{- if .Params.thumbnail }}
+    <meta property="twitter:image" content="{{ .Params.thumbnail }}">
+    {{ end -}}
+    <!-- End of Twitter -->
+    {{ .Hugo.Generator }}
+    {{ partial "styles.html" . }}
+    {{ if .Site.RSSLink }}
+    <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    {{ if isset .Site.Params "favicon" }}
+    <link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" />
+    {{ end }}
+    </head>
+    {{- if .IsHome -}}
+    <body>
+    {{- else -}}
+    <body class="d-flex flex-col">
+    {{- end -}}
+        <script>
+            document.body.classList.add('fade');
+            // console.log('added');
+        </script>    
+        {{`<!--[if lte IE 9]>
+            <p class="browserupgrade">ご使用のブラウザーはバージョンが古く、当サイトが正しく表示されない可能性があります。また、セキュリティーの観点からも危険です。最新のブラウザーに<a href="https://browsehappy.com/">アップデート</a>することを推奨いたします。</p>
+        <![endif]-->` | safeHTML }}
+        {{ if .IsHome }}
+        <div class="hero fixed-bg">
+            <div class="hero-inner">  
+            <div id="sky" class="sky"></div>  
+                <div class="full-moon-wrapper animated delay-1s fadeInRight">
+                    <svg class="full-moon">
+                        <circle cx="50" cy="50" r="30" stroke-width="4" />
+                    </svg>
+                </div>
+                <div class="hero-text animated delay-2s fadeInUp">
+                    <h1 class="site-title font-special"><span>THE</span><span>BLUE</span><span>MOON</span><span>MOMENT</span></h1>
+                    <h2 class="site-subtitle">A Blog by Danny Masao Winston</h2>
+                </div>
+            </div>
+        </div>
+        {{ else }}
+                <header class="site-header">
+                    <nav class="site-header-inner container container-center container-padding">
+                        <a href="{{ .Site.BaseURL }}" class="full-moon-wrapper">
+                            <svg viewBox="0 0 36 36" class="full-moon">
+                                <circle cx="18" cy="18" r="16" stroke-width="3" />
+                            </svg>
+                        </a>
+                        <ul class="site-header-list">
+                            <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+                            <li><a href="{{ .Site.BaseURL }}articles/">Articles</a></li>
+                            <li><a href="{{ .Site.BaseURL }}about/">About</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+        {{ end }}
+
+        {{ block "main" . }}
+
+        {{ end }}
+
+        <footer>
+            <nav class="footer-nav">
+                <div class="container container-center container-padding">
+                    <ul class="footer-links">
+                    {{ block "footer" . }}
+
+                    {{ end }}  
+                    </ul> 
+                </div>
+            </nav>               
+            <div class="footer-credits">
+                <p class="container container-center">Written, designed and coded by <a href="{{ .Site.BaseURL }}about/">Danny Masao Winston</a>
+                </p>
+            </div>          
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(e) {
+                document.body.classList.remove('fade');
+                // console.log('removed');
+        });
+        </script>
+        {{ partial "scripts.html" . }}
+    </body>
+</html>

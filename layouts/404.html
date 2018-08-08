@@ -1,0 +1,17 @@
+{{ define "main"}}
+		<main class="flex-grow1">
+            <section class="container container-center container-padding section">
+
+					<h1 class="page-title font-special">404 Page Not Found.<br><span>お探しのページは見つかりませんでした。</span></h1>
+					
+					<div class="my-8 ta-center">
+					<a class="link-color" href="{{ "/" | relURL }}">Homeに戻る</a>
+				</div>
+
+		                
+            </section>
+        </main>
+{{ end }}
+{{ define "footer" }}
+        <li><a href="/articles/">{{ partial "icon/icon-document.html" . }}<span>記事一覧を見る</span></a></li> 
+{{ end }}
