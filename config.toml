@@ -1,6 +1,6 @@
-baseURL = "https://inabluemoon.com/"
+baseURL = "https://thebluemoonmoment.com/"
 languageCode = "ja"
-title = "A Blue Moon Moment"
+title = "The Blue Moon Moment"
 preserveTaxonomyNames = true
 
 [Params]
