@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://inabluemoon.com/articles/james-poyser-sessions/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/articles/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/tags/hiphop/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/categories/music/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/tags/rb/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://inabluemoon.com/tags/</loc>
+    <lastmod>2018-07-28T12:59:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
