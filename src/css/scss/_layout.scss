@@ -1,0 +1,125 @@
+/* ////////////////////// Layout //////////////////////// */
+
+//////////// Container
+.container {
+  width: 100%;
+  max-width: $container-width;
+}
+
+.container-center {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.container-padding {
+   padding-left: $container-padding;
+   padding-right: $container-padding;
+   @include mq(md) {
+      padding-left: $container-padding-md;
+      padding-right: $container-padding-md;
+   }
+}
+
+.container-text {
+   width: 100%;
+   max-width: $text-width;
+}
+
+.section {
+   padding-top: 12rem;
+}
+
+
+//////////// Footer
+
+.footer-nav {
+   background-color: $bg-gray;
+   padding-top: $spacer-def;
+   padding-bottom: $spacer-def;
+}
+
+.footer-links {
+   font-size: $fs-sm;
+   li {
+      margin-bottom: 10px;
+   }
+   a,
+   button {
+      &:hover {
+         color: $link;
+      }
+   }
+   svg {
+      width: 1em;
+      margin-right: 4px;
+      display: inline-block;
+      vertical-align: middle;
+      fill: $gray-dark;
+   }
+   span {
+      display: inline-block;
+      vertical-align: middle;
+   }
+}
+
+.footer-credits {
+   padding-top: $spacer-def;
+   padding-bottom: $spacer-def;
+   @include main-gradient();
+   text-align: center;
+   p {
+      color: $gray;
+      font-size: $fs-xs;
+      a {
+         color: $link;
+      }
+   }
+}
+
+
+//////////// Navigation
+.main-nav {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: $z-mainnav;
+   @include main-gradient();
+}
+
+.footer .main-nav {
+   position: relative;
+   z-index: 1;
+}
+
+.main-nav-list {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 5px 0;
+   height: 100%;
+   li {
+      padding: 0 5px;
+   }
+   a {
+      font-size: $fs-xxs;
+      height: 4em; //50px
+      color: $gray;
+      display: block;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   svg {
+      width: 2em;
+      height: 2em;
+      fill: $gray;
+      margin-bottom: 3px;
+   }
+   span {
+      display: block;
+      line-height: 1;
+   }
+}

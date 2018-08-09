@@ -1,0 +1,78 @@
+// Text Align
+.ta-left {
+  text-align: left;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-justify {
+  text-align: justify;
+}
+
+
+
+// Font Weight
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+
+
+// Font Size
+.fs-xs {
+  font-size: $fs-xs;
+}
+
+.fs-sm {
+  font-size: $fs-sm;
+}
+
+.fs-def {
+  font-size: $fs-def;
+}
+
+.fs-md {
+  font-size: $fs-md;
+}
+
+.fs-lg {
+  font-size: $fs-lg;
+}
+
+.fs-xl {
+  font-size: $fs-xl;
+}
+
+
+
+// Text Overflow
+.txt-ellipsis {
+  @include txt-ellipsis();
+}
+
+.txt-wrap {
+  @include txt-wrap();
+}
+
+
+
+// Text Decoration
+.td-none {
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+}

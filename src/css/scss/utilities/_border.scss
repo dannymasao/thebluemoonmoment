@@ -1,0 +1,39 @@
+// Border Radius
+.br-subtle {
+  border-radius: $br-subtle;
+}
+
+.br-rounded {
+  border-radius: $br-rounded;
+}
+
+.br-circle {
+  border-radius: $br-circle;
+}
+
+
+
+// Border
+.brd {
+	border: $border;
+}
+
+.brd-top {
+  border-top: $border;
+}
+
+.brd-right {
+  border-right: $border;
+}
+
+.brd-left {
+  border-left: $border;
+}
+
+.brd-bottom {
+  border-bottom: $border;
+}
+
+.brd-on-dark {
+  border-color: $border-color-ondark;
+}

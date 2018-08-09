@@ -1,0 +1,51 @@
+// Display
+.d-block {
+  display: block;
+}
+
+.d-in {
+  display: inline;
+}
+
+.d-inblock {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inflex {
+  display: inline-flex;
+}
+
+.d-none {
+  display: none;
+}
+
+
+
+// Responsive Display Flex
+@include mq(sm) {
+  .sm_d-flex {
+  	display: flex;
+  }
+}
+
+@include mq(md) {
+  .md_d-flex {
+  	display: flex;
+  }
+}
+
+@include mq(lg) {
+  .lg_d-flex {
+  	display: flex;
+  }
+}
+
+@include mq(xl) {
+  .xl_d-flex {
+  	display: flex;
+  }
+}

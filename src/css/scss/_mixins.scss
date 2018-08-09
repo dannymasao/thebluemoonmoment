@@ -1,0 +1,88 @@
+/* ////////////////////// Mixins //////////////////////// */
+
+
+
+// メディアクエリ
+// ブレイクポイントは_variables.scss内
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// Main Gradient
+@mixin main-gradient() {
+  background: $black;
+  background: linear-gradient(135deg, $black 0%, $purple-dark 100%); 
+}
+
+
+// Component focus shadow
+@mixin focus-shadow($color: $primary) {
+  box-shadow: 0 0 0 .2em rgba($color, .3);
+  border-color: $color;
+}
+
+
+
+// Clearfix
+@mixin clearfix() {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+
+
+// Text Overflow
+@mixin txt-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin txt-wrap() {
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+// Flex
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Hover Variations
+@mixin hover-dark($color: $primary) {
+  color: darken($color, 10%);
+}
+
+@mixin hover-light($color: $primary) {
+  color: lighten($color, 10%);
+}
+
+@mixin text-link() {
+  color: $link;
+  border-bottom: 1px solid $link;
+  word-wrap: break-word;
+    &:hover {
+      color: $link-hover;
+      border-color: transparent;
+    }
+}
+
+//横スクロール　（直下にinline-blockなど）
+@mixin horizontal-scroll() {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
