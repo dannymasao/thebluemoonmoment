@@ -1,5 +1,0 @@
-.DS_Store
-src/*
-*.sublime-project
-*.sublime-workspace
-/test/*
