@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <main class="flex-grow1">
-    <section class="container container-center container-padding section">
+  <main class="main-top">
+    <section class="container container-center container-padding section-top section-bottom">
         <h1 class="page-title font-special">{{ with .Site.GetPage "section" "articles" }}{{ .Title }}{{ end }}</h1>
         <ul class="article-list">
             {{ range .Pages }}

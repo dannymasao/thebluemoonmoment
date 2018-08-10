@@ -25,17 +25,76 @@
    max-width: $text-width;
 }
 
-.section {
+.main-top {
+   padding-top: $header-height;
+}
+
+.section-top {
    padding-top: 12rem;
+}
+
+.section-bottom {
+      padding-bottom: 12rem;
+}
+
+////////////// Site Header
+
+.site-header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: $header-height;
+   z-index: $z-mainnav;
+   background-color: rgba($white, .85);
+}
+
+.site-header-inner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100%;
+}
+
+.site-header-list {
+   display: flex;
+   align-items: center;
+   li {
+      padding-left: $spacer-md;
+   }
+   a {
+      color: $link;
+      display: block;
+      font-size: $fs-def;
+      &:hover {
+         color: $text;
+      }
+   }
+   @include mq(md) {
+      li {
+         padding-left: $spacer-md;
+      }
+      a {
+         font-size: $fs-def;
+      }
+   }
 }
 
 
 //////////// Footer
 
-.footer-nav {
+.footer {
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: $footer-height;
+   position: absolute;
    background-color: $bg-gray;
-   padding-top: $spacer-def;
-   padding-bottom: $spacer-def;
+}
+
+.footer-nav {
+   padding-top: $spacer-md;
+   padding-bottom: $spacer-md;
 }
 
 .footer-links {
@@ -63,15 +122,33 @@
 }
 
 .footer-credits {
-   padding-top: $spacer-def;
-   padding-bottom: $spacer-def;
+   padding-top: $spacer-sm;
+   padding-bottom: $spacer-sm;
    @include main-gradient();
    text-align: center;
+   height: 4em;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
    p {
       color: $gray;
       font-size: $fs-xs;
       a {
          color: $link;
+      }
+      span {
+         display: block;
+      }
+   }
+   @include mq(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+         span {
+            display: inline-block;
+         }
       }
    }
 }

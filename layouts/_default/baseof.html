@@ -72,11 +72,8 @@
     <link rel="icon" href="{{ .Site.BaseURL }}{{ .Site.Params.favicon }}" />
     {{ end }}
     </head>
-    {{- if .IsHome -}}
+
     <body>
-    {{- else -}}
-    <body class="d-flex flex-col">
-    {{- end -}}
         <script>
             document.body.classList.add('fade');
             // console.log('added');
@@ -121,7 +118,7 @@
 
         {{ end }}
 
-        <footer>
+        <footer class="footer">
             <nav class="footer-nav">
                 <div class="container container-center container-padding">
                     <ul class="footer-links">
@@ -132,7 +129,9 @@
                 </div>
             </nav>               
             <div class="footer-credits">
-                <p class="container container-center">Written, designed and coded by <a href="{{ .Site.BaseURL }}about/">Danny Masao Winston</a>
+                <p class="container container-center">
+                    <span>Written, designed and coded by </span>
+                    <span><a href="{{ .Site.BaseURL }}about/">Danny Masao Winston</a></span>
                 </p>
             </div>          
         </footer>
