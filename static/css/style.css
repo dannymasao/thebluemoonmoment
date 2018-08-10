@@ -742,3 +742,5 @@ body.user-is-tabbing *:focus { outline: 2px solid #5395EF !important; outline: 5
 .sns-links a svg { width: 2em; fill: #9a99a5; -webkit-transition: 0.25s; -o-transition: 0.25s; transition: 0.25s; }
 
 .sns-links a:hover svg { fill: #5395EF; }
+
+.jeeah { color: #fff; }
