@@ -1,3 +1,5 @@
+'use strict';
+
 // Clipboard
 /*
 const shareBtn = document.getElementById("copyUrl");
@@ -18,11 +20,11 @@ if (shareBtn != null) {
 }*/
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-/*
-let vh = window.innerHeight * 0.01;
-console.log(window.innerHeight);
-console.log(vh);
+
+var vh = window.innerHeight * 0.01;
+// console.log(window);
+//console.log(window.visualViewport.height);
+// console.log(vh);
+
 // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-*/
-"use strict";
+document.documentElement.style.setProperty('--vh', vh + 'px');
