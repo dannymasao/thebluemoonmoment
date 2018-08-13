@@ -239,6 +239,7 @@
 @supports (display: grid) {
    .article-header {
       height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
       padding: $header-height 0 $header-height;
       // padding: 0;
       display: grid;
