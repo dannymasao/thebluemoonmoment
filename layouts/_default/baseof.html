@@ -11,6 +11,16 @@
         {{ .Title }} | {{ .Site.Title }}
     {{- end -}}
     </title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65560255-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-65560255-2');
+    </script>
+    <!--// Google Analytics -->
     <meta name="description" content="
     {{- if .IsHome -}}
         {{ $.Site.Params.description }}
