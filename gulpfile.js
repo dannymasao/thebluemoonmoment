@@ -84,7 +84,7 @@ gulp.task('watch', function() {
     // });
     // gulp.watch('./dist/*.html', ['reload']);
     gulp.watch('./src/css/scss/*.scss', ['css']);
-    // gulp.watch(jsPath.src, ['js']);
+    gulp.watch(jsPath.src, ['js']);
 });
 
 
